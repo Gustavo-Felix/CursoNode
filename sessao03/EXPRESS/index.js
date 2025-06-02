@@ -2,7 +2,7 @@ const express = require('express'); // importando o express
 const app = express(); // iniciando o express
 
 app.get("/", (req, res) => {
-        res.send("Bem-vindo!")
+        res.send("<h1>Bem-vindo!</h1>")
     }
 );
 
@@ -18,7 +18,7 @@ app.get("/post", (req, res) => {
 
 app.listen(8080, (err) => {
     if(err){
-        console.log('Ocorreu um erro!')
+        console.log('Ocorreu um erro!', err)
     }
     else{
         console.log('Servidor iniciado com sucesso!')
