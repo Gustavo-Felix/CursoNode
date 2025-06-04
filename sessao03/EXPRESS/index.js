@@ -8,7 +8,7 @@ app.get("/", (req, res) => {
 
 app.get("/blog/:artigo?", (req, res) => {
 
-    var artigo = req.params.artigo
+    var artigo = req.params.artigo;
 
     if(artigo) {
         res.send("<h2>Artigo: " + artigo + "</h2>");
@@ -19,8 +19,15 @@ app.get("/blog/:artigo?", (req, res) => {
     
 });
 
-app.get("/post", (req, res) => {
-    res.send("Bem-vindo ao meu post!");
+app.get("/canal/youtube", (req, res) => {
+    var canal = req.query["canal"];
+
+    if(canal){
+        res.send(canal);
+    }
+    else{
+        res.send('Nenhum canal encontrado!')
+    }
 
 });
 
