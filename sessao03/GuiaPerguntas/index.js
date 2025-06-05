@@ -3,8 +3,15 @@ const app = express();
 
 app.set('view engine', 'ejs'); // Estou dizendo para usar o EJS como View Engine
 
-app.get("/", (req, res) => {
-    res.render('index.ejs');
+app.get("/:nome/:lang", (req, res) => {
+    var nome = req.params.nome;
+    var lang = req.params.lang;
+    res.render('index.ejs',
+        {
+            nome: nome,
+            lang: lang,
+        }
+    );
 
 });
 
