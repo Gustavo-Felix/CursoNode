@@ -12,5 +12,11 @@
 
     <p>Nome: <%= nome %></p>
     <p>Linguagem Favorita: <%= lang %></p>
+
+    <% if(msg) { %>
+        <p>Esta é uma mensagem de Erro.</p>        
+    <% } else { %>
+        <p>Ocorreu tudo corretamente!</p>
+    <% } %>
 </body>
 </html>
