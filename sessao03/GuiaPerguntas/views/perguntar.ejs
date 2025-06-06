@@ -4,28 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guia Perguntas</title>
-    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+    <nav class="navbar navbar-light bg-primary">
+        <a class="navbar-brand" href="/">
+            <img src="/img/guia.png" alt="">
+        </a>
+    </nav>
     <div class="container">
-        <h3>Realizar pergunta</h3>
-        <form>
-            <label>Títulos</label>
-            <hr>
-            <input type="text" placeholder="Titulo" class="form-control">
-            
-            <br>
-            
-            <label>Descrição</label>
-            <hr>
-            <textarea placeholder="Descreva sua pergunta aqui!" class="form-control">
-
-            </textarea>
-            <br>
-            <button class="btn btn-success">Perguntar</button>
-
-        </form>
+        <div class="card" id="formulario-pergunta">
+            <div class="card-header">
+                <h3>Realizar pergunta</h3>
+            </div>
+            <div class="card-body">
+                <form>
+                    <label>Títulos</label>
+                    <hr>
+                    <input type="text" placeholder="Titulo" class="form-control">
+                    
+                    <br>
+                    
+                    <label>Descrição</label>
+                    <hr>
+                    <textarea placeholder="Descreva sua pergunta aqui!" class="form-control">
+        
+                    </textarea>
+                    <br>
+                    <button class="btn btn-primary">Perguntar</button>
+                </form>
+            </div>
+        </div>
     </div>    
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
