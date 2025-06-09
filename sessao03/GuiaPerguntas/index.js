@@ -6,10 +6,16 @@ app.use(express.static('public'));
 
 app.get("/", (req, res) => {
     res.render('index.ejs');
+
 });
 
 app.get("/perguntar", (req, res) => {
     res.render('perguntar.ejs');
+
+});
+
+app.post("/salvarPerguntas", (req, res) => {
+    res.send("Formulário Recebido!");
 
 });
 
