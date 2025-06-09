@@ -4,6 +4,7 @@
 .pnp.js
 
 sessao03/EXPRESS/node_modules
+/sessao03/GuiaPerguntas/database/database.js
 
 # testing
 /coverage

@@ -1,6 +1,18 @@
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
+const connection = require('./database/database');
+
+// Database
+
+connection
+    .authenticate()
+    .then(() => {
+        console.log('Conexão Feita com sucesso!');
+    })
+    .catch((erro) => {
+        console.log('Erro: ' + erro);
+    })
 
 app.set('view engine', 'ejs'); // Estou dizendo para usar o EJS como View Engine
 app.use(express.static('public'));
