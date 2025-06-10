@@ -21,7 +21,9 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
-    Pergunta.findAll({ row: true }).then((perguntas) => {
+    Pergunta.findAll({ row: true, order: [
+        ['id', 'DESC'] // ASC = Crescente - DESC = Decrescente
+    ] }).then((perguntas) => {
         res.render('index.ejs', {
             perguntas: perguntas
         });
