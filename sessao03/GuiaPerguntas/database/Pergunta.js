@@ -16,3 +16,5 @@ Pergunta.sync({force: false}).then(() => {
     console.log('Tabela criada com sucesso!');
 
 }); // Se não existir a tabela pergunta, ela será criada
+
+module.exports = Pergunta;
