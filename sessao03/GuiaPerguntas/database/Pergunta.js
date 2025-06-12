@@ -13,7 +13,7 @@ const Pergunta = connection.define('perguntas', { // Cria a tabela no MySQL util
 });
 
 Pergunta.sync({force: false}).then(() => {
-    console.log('Tabela criada com sucesso!');
+    console.log('Tabela Pergunta criada com sucesso!');
 
 }); // Se não existir a tabela pergunta, ela será criada
 
