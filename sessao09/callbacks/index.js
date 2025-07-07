@@ -1,4 +1,4 @@
-function sendEmail(corpo, para){
+function sendEmail(corpo, para, callback){
     setTimeout(() => {
         console.log(`
             Para: ${para}
@@ -6,10 +6,12 @@ function sendEmail(corpo, para){
             ${corpo}
             ----------------------------
             De: Gustavo Félix
-            `)
-    }, 8000)
+            `);
+        callback();
+    }, 8000);
 }
 
-console.log("Seu e-mail foi enviado com sucesso!")
-sendEmail("Oi, este é um teste de programação assíncrona.", "gustavo")
-console.log("Enviado!")
+console.log("Seu e-mail foi enviado com sucesso!");
+sendEmail("Oi, este é um teste de programação assíncrona.", "gustavo", () => {
+    console.log("Enviado!");
+});
