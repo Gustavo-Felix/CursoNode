@@ -53,12 +53,17 @@ function sendEmail(corpo, para){
 async function email(){
     var id = await getId();
     var email = await getEmailBD(id);
-    sendEmail("Mensagem", email).then(() => {
+    
+    try{
+        await sendEmail("Mensagem", email);
         console.log("Email enviado! para o usuário com o id: " + id);
-    }).catch((err) => {
-        console.log(err);
-    });
+
+    } catch(erro) {
+        console.log(erro)
+    }
 }
+
+email();
 
 function getUsers(){
     return new Promise((resolve, reject) => {
