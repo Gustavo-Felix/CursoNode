@@ -1,19 +1,22 @@
 function sendEmail(corpo, para){
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            var Error = true;
+            var Error = false;
             if(!Error){
-                resolve(); // Promise OK
+                resolve({time: 6, to: "pessoa"}); // Promise OK
             } else {
-                reject(); // Promise Falhou
+                reject("Fila cheia"); // Promise Falhou
             }
 
         }, 4000);
     });
 }
 
-sendEmail("Olá mundo", "pessoa").then(() => {
-    console.log("Deu Certo");
-}).catch(() => {
-    console.log("Falhou");
+sendEmail("Olá mundo", "pessoa").then(({time, to}) => {
+    console.log(`
+    Time: ${time}
+    -----------------------
+    To: ${to}`);
+}).catch((erro) => {
+    console.log(erro);
 });
